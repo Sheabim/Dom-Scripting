@@ -16,31 +16,44 @@ form.addEventListener ('submit', (e) =>{
       //CRATEING THE LABEL CONFIRM WILL BE ADD ON HTML
       const label =  document.createElement('label');
       label.textContent = 'confirmed';//TYPE OF CONTENT
-      li.appendChild(label);//ADDING ON HTML
+      li.appendChild(label);//ADDING ON HTMl
+
 
        //CREATING CHECK BOXY AND APPENDING
       const checkbox = document.createElement('input')
       checkbox.type = 'checkbox';//TYPE OF CONTENT
        label.appendChild(checkbox);//ADDING ON HTML
 
+
+       //CREATING remove
+       const button = document.createElement('button')
+       button.textContent = 'remove';//TYPE OF CONTENT
+       li.appendChild(button);//ADDING ON HTML
 });
 
 
-ul.addEventListener('change', (e) => {
+   ul.addEventListener('change', (e) => {
        const checkbox = event.target;// event call
        const checked = checkbox.checked; //check the variable
        const listItem = checkbox.parentNode.parentNode;// i dont know
 
 
        if (checked) {
-         listItem.clasName = 'responed';
-       } else {
-         listItem.className = '';
-
-        }
-
-
+           listItem.clasName = 'responed';
+         } else {
+           listItem.className = '';
+  }
 });
+
+ul.addEventListener('click', (e) => {
+      if (e.target.tagName === "button") {
+      const li = e.target.parentNode;
+      const ul = li.parentNode;
+    ul.removeChild(li);
+  }
+});
+
+
 
 
 
