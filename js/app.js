@@ -55,13 +55,27 @@ ul.addEventListener('change', (e) => {
     // received by the button but travel to li then ul
 // if the event target elemnt tag name is button please run
 //Remove start to work
-
-ul.addEventListener('click', (e) => {
-      if (e.target.tagName === "BUTTON") {
-      const li = e.target.parentNode;
-      const ul = li.parentNode;
-    ul.removeChild(li);
-  }
+//
+// ul.addEventListener('click', (e) => {
+//       if (e.target.tagName === "BUTTON") {
+//      li.appendChild(span);
+//       const button = e.target;
+//       const li = button.parentNode;
+//       const ul = li.parentNode;
+// if(button.textContent === 'remove'){
+//  ul.removeChild(li);
+//   } else if (button.textContent === 'edit'){
+//     const span = document.createElement('span');
+//     span.textContent = text;
+//    const span = li.firstElementChild;
+//     const input = document.createElement('input');
+// input.type = 'text';
+// input.value = span.textContent;
+// li.insertBefore(input, span);
+// li.removeChild(span);
+//
+//  }
+// }
 });
 
 
